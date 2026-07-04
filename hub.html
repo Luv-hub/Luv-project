@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS Login</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .login-box{
+            width:360px;
+            background:#fff;
+            padding:35px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,.2);
+        }
+
+        h2{
+            text-align:center;
+            color:#333;
+            margin-bottom:20px;
+        }
+
+        input,select{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:15px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+
+        p{
+            text-align:center;
+            margin-top:15px;
+        }
+
+        a{
+            text-decoration:none;
+            color:#007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>Human Resource Management System</h2>
+
+<form>
+
+<input type="email" placeholder="Enter Email" required>
+
+<input type="password" placeholder="Enter Password" required>
+
+<select>
+<option>Employee</option>
+<option>Admin</option>
+</select>
+
+<button type="button" onclick="login()">Login</button>
+
+</form>
+
+<p>Don't have an account?
+<a href="signup.html">Register</a>
+</p>
+
+</div>
+
+<script>
+
+function login(){
+
+let role=document.querySelector("select").value;
+
+if(role=="Admin"){
+window.location.href="admin.html";
+}
+else{
+window.location.href="dashboard.html";
+}
+
+}
+
+</script>
+
+</body>
+</html>
